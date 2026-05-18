@@ -1,0 +1,333 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Rank Unlocked</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050816;
+    overflow-x:hidden;
+    font-family:'Poppins', sans-serif;
+    color:white;
+}
+
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:url('https://i.imgur.com/YKY28eT.png');
+    animation:moveStars 120s linear infinite;
+    opacity:.35;
+    z-index:-1;
+}
+
+@keyframes moveStars{
+    from{transform:translateY(0);}
+    to{transform:translateY(-1000px);}
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+h1{
+    font-family:'Orbitron', sans-serif;
+    font-size:3rem;
+    letter-spacing:4px;
+    margin-bottom:20px;
+    text-shadow:0 0 20px rgba(255,255,255,.5);
+}
+
+h2{
+    font-size:2.2rem;
+    margin-bottom:20px;
+    color:#f4d06f;
+}
+
+p{
+    max-width:700px;
+    line-height:1.8;
+    font-size:1.1rem;
+    opacity:.92;
+}
+
+.small{
+    margin-top:20px;
+    font-size:.9rem;
+    letter-spacing:3px;
+    opacity:.6;
+}
+
+.fade{
+    animation:fadeIn 2s ease forwards;
+    opacity:0;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+}
+
+.timeline{
+    margin-top:30px;
+}
+
+.message-btn{
+    margin-top:40px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:#f4d06f;
+    color:#050816;
+    font-weight:bold;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.message-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(244,208,111,.5);
+}
+
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.85);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.modal-content{
+    background:#10162f;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:40px;
+    max-width:700px;
+    width:100%;
+    box-shadow:0 0 40px rgba(255,255,255,.08);
+}
+
+.close{
+    margin-top:25px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#f4d06f;
+    color:#050816;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.final{
+    font-size:2rem;
+    line-height:1.6;
+}
+
+.heart{
+    color:#f4d06f;
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2rem;
+    }
+
+    h2{
+        font-size:1.6rem;
+    }
+
+    p{
+        font-size:1rem;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<section>
+    <div class="fade">
+        <h1>NEW RANK UNLOCKED</h1>
+        <h2>JEFE DE MANTENIMIENTO</h2>
+
+        <p>
+            porque así todo sea más pesado...<br>
+            nunca te diste por vencido
+        </p>
+
+        <div class="small">
+            SYSTEM UPDATE COMPLETE
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="fade timeline">
+        <h2>el niño que soñaba</h2>
+
+        <p>
+            el niño que quizá no siempre supo qué tan lejos llegaría…
+            pero que nunca dejó de intentarlo
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="fade timeline">
+        <h2>el ingeniero</h2>
+
+        <p>
+            el que aprendió a resolver, construir y sostener
+            incluso bajo presión
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="fade timeline">
+        <h2>el hombre que nunca se rindió</h2>
+
+        <p>
+            aunque el camino se haya vuelto pesado,
+            nunca dejaste de avanzar
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="fade timeline">
+        <h2>el líder</h2>
+
+        <p>
+            por demostrar determinación, liderazgo
+            y la capacidad de sostener incluso
+            en días difíciles
+        </p>
+
+        <div class="small">
+            STATUS: PROMOTED
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="fade timeline">
+        <h2>mi hogar</h2>
+
+        <p>
+            entre tantos logros,
+            esta seguirá siendo mi parte favorita de ti…
+            la forma en la que cuidas,
+            buscas seguridad,  mejorar
+            y eliges quedarte
+        </p>
+
+        <button class="message-btn" onclick="openMessage()">
+            message from your girl ♡
+        </button>
+    </div>
+</section>
+
+<section>
+    <div class="fade">
+        <p class="final">
+            and this is only the beginning...<br><br>
+
+            <span class="heart">
+                i'll always be proud of you
+            </span>
+        </p>
+    </div>
+</section>
+
+<div class="modal" id="messageModal">
+
+    <div class="modal-content">
+
+        <h2>for leo ♡</h2>
+
+        <p>
+            estoy muy orgullosa de ti,
+            no solo por el puesto,
+            sino por el hombre en el que te has convertido.<br><br>
+
+            porque aun cansado,
+            aun bajo presión,
+            aun cuando la vida se pone difícil…
+            sigues adelante,
+            y eso merece ser reconocido.<br><br>
+
+            admiro muchísimo tu mente,
+            tu capacidad,
+            tu liderazgo
+            y la forma en la que sostienes tantas cosas.<br><br>
+
+            y aunque hoy esto sea un logro profesional,
+            para mí también es algo personal,
+            porque me tocó ver todo lo que hay detrás de ti
+            para llegar aquí.<br><br>
+
+            gracias por nunca rendirte,
+            gracias por seguir construyendo,
+            gracias por demostrarme todos los días
+            el hombre tan increíble que eres.<br><br>
+
+            te amo mucho, jefe ♡
+        </p>
+
+        <button class="close" onclick="closeMessage()">
+            close
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+function openMessage(){
+    document.getElementById('messageModal').style.display='flex';
+}
+
+function closeMessage(){
+    document.getElementById('messageModal').style.display='none';
+}
+
+</script>
+
+</body>
+</html>
+
